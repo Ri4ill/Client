@@ -1,0 +1,687 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+.conatiner {
+  max-height: 90vh;
+  margin: 0 10vw;
+  margin-top: 20px;
+
+}
+.active {
+  color: #ff00ff !important;
+  cursor: default;
+}
+.header {
+  margin: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+.nav div{
+  margin: 0 10px;
+  font-size:20px;
+  cursor: pointer;
+}
+.me{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content:center;
+  margin-top: 25vh;
+}
+.me_flex{
+  display: flex;
+  justify-content: space-between;
+}
+.me_text {
+  padding-top: 25px;
+  margin-right: 15vw;
+}
+.me_stack {
+  padding-right: 30px;
+  border-right: 2px solid black;
+}
+.me_stack_photo {
+  align-items: center;
+}
+.me_stack_photo img{
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+}
+.flex {
+  display: flex;
+}
+.about{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 30vh;
+}
+.about_main{
+  width: 400px;
+  height: 300px;
+  display: flex;
+  border-radius: 20px;
+  background-image: url('./img/notebook.jpg');
+  background-size: cover;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.about_photo{
+  top: 55%;
+  left: 45%;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url('./img/log-1.png');
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  animation: Atext 15s linear 0s infinite
+}
+.about_photo_me{
+  width: 50px;
+  height: 50px;
+  animation: Btext 15s linear 0s infinite
+}
+.about_text{
+  padding-left: 20px;
+  text-align: center;
+}
+.container_portfolio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foother{
+  margin-top:50vh;
+}
+.project_flex div{
+  display: flex;
+}
+.project_flex{
+  width: 80vw;
+  margin: 0 auto;
+}
+.imgCAR{
+  width: 30%;
+  height: 30%;
+}
+.imgCAR img{
+  border: 2px solid black;
+  border-radius: 5px;
+  width: auto;
+  height: auto;
+}
+.project_text{
+  display: block;
+  width: 30px;
+}
+
+
+
+
+@keyframes Atext {
+  0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+@keyframes Btext {
+  0% {transform:rotate(0deg);}
+    100% {transform:rotate(-360deg);}
+}
+.ramka-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin: 30px auto;
+    border: 8px solid #ff00ff;
+    background: white;
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+    animation: anim-ramka-1 10s infinite;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif; 
+}
+@keyframes anim-ramka-1 {
+    0% {
+        border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+        box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+    }
+    25% {
+        border-radius: 58% 42% 75% 25%/76% 46% 54% 24%;
+    }
+    50% {
+        border-radius: 50% 50% 33% 67%/55% 27% 73% 45%;
+        box-shadow: -10px -5px 50px rgba(0,0,0,0.2);
+    }
+    75% {
+        border-radius: 33% 67% 58% 42%/63% 68% 32% 37%;
+    }
+}
+
+@media screen 
+and (max-width: 1000px){
+  .car_info{
+    display: none;
+  }
+  .car_phone_but{
+    margin: auto;
+    display: inline !important;
+    width: 100%;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .car_phone_but button{
+    width: 100%;
+    padding: 10px;
+    background-color: #b30027;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFF;
+  }
+
+  
+}
+.car_list{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 20px auto;
+  height: 30vh;
+  width: 80vw;
+  margin-bottom: 25vh;
+}
+.car_info{
+  height: 100%;
+  width: 30%;
+  text-align: center;
+}
+.car_buttons{
+  height: 100%;
+  width: 30%;
+  min-width: 30%;
+}
+
+.car_button_activ{
+  background-color:  #b30027;
+  color: #fff !important;
+  border-radius: 5px;
+  width: 100%;
+  height: 16.7%;
+}
+.car_button  {
+  
+  width: 100%;
+  height: 16.7%;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+  border: none;
+  z-index: 1;
+}
+.car_button:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #b30027;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.car_button:hover {
+  color: #fff;
+}
+.car_button:hover:after {
+  left: 0;
+  width: 100%;
+}
+.car_photo{
+  padding: auto;
+  margin: auto;
+  max-height: 250px;
+  width: auto;
+  height: auto;
+  
+}
+.car_photo_div{
+  padding: auto;
+  margin: auto;
+  width:40vw;
+}
+.car_info{
+  min-width: 20vw;
+}
+.car_info_list {
+  width: 100%;
+  height: 70%;
+}
+.car_info_list div{
+  height: 14.3%;
+  display: flex;
+  justify-content: space-between;
+}
+.car_price{
+ width: 100%;
+ height: 15%;
+
+}
+.car_price h4{
+  border-radius: 5px;
+  vertical-align: middle;
+  margin-bottom: 2.1%;
+  padding-top: 1%;
+  height: 70%;
+  color: #fff;
+  background-color: #b30027;
+ }
+.car_reserve{
+  width: 100%;
+  height: 15%;
+  cursor: pointer;
+}
+.car_reserve h3{
+  border-radius: 5px;
+  padding-top: 1%;
+  margin-top: 2.9%;
+  height: 80%;
+  color: #fff;
+  background-color: #b30027;
+}
+.car_phone_but{
+  display: none;
+}
+
+
+
+
+@media screen 
+and (max-width: 1000px){
+    .car_header_buttons{
+      display: none !important;
+    }
+    .car_header_loginBox{
+      display: none !important;
+    }
+    .car_burger_but{
+      display: block !important;
+      
+    }
+    .car_header{
+      justify-content: space-between;
+      padding: 0 10%;
+    }
+}
+.car_burger_but_activ{
+  display: none;
+}
+.car_burger_but{
+  display: none;
+}
+.car_burger{
+  display: none !important;
+}
+.car_burger_activ{
+  right: 0px;
+  position: absolute;
+  z-index: 1;
+  width: 60vw;
+  top: 0;
+  height: 100vh;
+  display: block !important;
+  background-color: #0000006c;
+}
+.car_burger_activ  *{
+  width: 100%;
+  padding-left: auto;
+  height: 15%;
+  margin: auto;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.car_header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+}
+.car_header div{
+  display: flex;
+}
+.car_header_logo{
+  height: 100%;
+  width: 10%;
+  align-items: center;
+}
+.car_header_logo img{
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  justify-content: start;
+}
+.car_header_buttons{
+  padding: 20%;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+.car_header_buttons button{
+  cursor: pointer;
+}
+.car_header_loginBox{
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;
+  height: 100%;
+}
+.car_header_sign{
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+.car_header_reg{
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 40px;
+}
+
+
+
+
+
+
+
+@media screen 
+and (max-width: 1000px){
+  .car_top_png{
+    display: none;
+  }
+  .car_top{
+    width: 90vw !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-top: 10vh !important;
+  }
+  .car_top_text{
+    margin: auto !important;
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .car_top_text_h{
+    margin: auto !important;
+    width: 80% !important;
+  }
+  .car_top_button{
+    margin: auto !important;
+    width: 80% !important;
+  }
+  .car_top_button button{
+    font-size: 20px !important;
+    margin: 10% auto;
+    width: 60% !important ;
+
+  }
+  
+}
+.car_top{
+  width: 90vw;
+  height: 93vh;
+  margin: 0 auto;
+  margin-top: 20vh;
+  display: flex;
+  justify-content: space-around;
+}
+.car_top_text{
+  white-space: nowrap;
+  padding-top: 3%;
+  width: 30%;
+  height: 70vh;
+  margin:  0 auto;
+}
+.car_top_text_h{
+  width: 80%;
+  font-size: 3vh;
+}
+.car_top_button{
+  margin-top:20%;
+  display: flex;
+  width: 80%;
+}
+.car_top_button button{
+  width: 100%;
+  align-items: center;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  background-color:#b30027;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2vw;
+}
+.car_top_png{
+  width: 100%;
+  height: 60%;
+}
+
+
+
+
+
+
+
+
+@media screen 
+and (max-width: 1000px){
+  .car_find{
+    margin-bottom: 20vh !important;
+    width: 100vw;
+    height: 25vh;
+  }
+}
+
+.car_find{
+  margin-bottom: 40vh;
+  width: 100vw;
+  height: 25vh;
+}
+.car_find h3{
+  text-align: center;
+}
+.car_find_box{
+  margin: auto;
+  height: 100%;
+  width: 90%;
+}
+.car_find_box div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+#car_find_box_input{
+  color: #adadad;
+  width: 40%;
+  height: 50%;
+}
+.car_find_box_text{
+  margin-right: 5%;
+}
+.car_find_button{
+  border-radius: 5px;
+  margin-left: 21%;
+  width: 40%;
+  height: 50%;
+  color: #fff;
+  background-color: #b30027;
+  cursor: pointer;
+}
+#type{
+  margin-right: 10%;
+}
+.car_find_png{
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+
+
+
+
+.car_FAQ{
+  margin: auto;
+  width: 70vw;
+  text-align: center;
+  margin-bottom: 25vh;
+}
+.car_FAQ h2{
+  margin-bottom: 2%;
+}
+.car_FAQ h3{
+  margin-bottom: 1%;
+}
+.car_FAQ_accordion {
+  background-color: #ffffff;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;  
+  border-radius: 5px;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+}
+.car_FAQ_accordion img{
+  width: 20px;
+  height: 20px; 
+  transition: 0.4s;
+}
+.car_FAQ_accordion:hover {
+  background-color: #b30027;
+  color: #FFF;
+}
+.car_FAQ_accordion_activ{
+  display: flex;
+  justify-content: space-between;
+  background-color: #b30027;
+  color: #FFF;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;  
+  border-radius: 5px;
+  transition: 0.4s;
+}
+.car_FAQ_accordion:hover img,.car_FAQ_accordion_activ img{
+  width: 20px;
+  height: 20px;
+  transform:rotate(-90deg);
+  filter: invert(100%); 
+  -webkit-filter:invert(100%); 
+}
+.car_FAQ_panel{
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+.car_FAQ_panel_activ{
+  padding: 0 18px;
+  background-color: white;
+  overflow: hidden;
+}
